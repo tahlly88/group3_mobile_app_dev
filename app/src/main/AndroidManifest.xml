@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hangman">
         <activity
-            android:name=".about"
+            android:name=".newGame"
             android:exported="false" />
+        <activity
+            android:name=".aboutGame"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
