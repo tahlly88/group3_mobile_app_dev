@@ -3,9 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_about.xml" value="0.209375" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.37271728515625" />
-        <entry key="app/src/main/res/layout/activity_new_game.xml" value="0.33061594202898553" />
+        <entry key="..\:/Users/mlgga/AndroidStudioProjects/group3_mobile_app_dev/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/mlgga/AndroidStudioProjects/group3_mobile_app_dev/app/src/main/res/layout/activity_new_game.xml" value="0.55" />
       </map>
     </option>
   </component>
