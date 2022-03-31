@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         AssetManager assetManager = getAssets();
         try {
-            InputStream inputStream = assetManager.open("words.txt");
+            InputStream inputStream = assetManager.open("fiveLetterWords.txt");
             dictionary = new wordList(inputStream);
         } catch (IOException e) {
             Toast toast = Toast.makeText(this, "Could not load dictionary", Toast.LENGTH_LONG);
