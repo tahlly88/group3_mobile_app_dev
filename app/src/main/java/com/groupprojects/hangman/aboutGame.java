@@ -3,6 +3,7 @@ package com.groupprojects.hangman;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 public class aboutGame extends AppCompatActivity {
@@ -16,5 +17,9 @@ public class aboutGame extends AppCompatActivity {
          Toast toast2 = Toast.makeText(this, wordList.getWord(), Toast.LENGTH_LONG);
          toast2.show();
 
+    }
+
+    public void getNewWord(View view){
+        Toast.makeText(aboutGame.this, wordList.getWord(), Toast.LENGTH_SHORT).show();
     }
 }
