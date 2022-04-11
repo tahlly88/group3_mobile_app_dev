@@ -10,7 +10,7 @@
         android:id="@+id/showCurrWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:onClick="showCurrWord"
         android:text="show current word"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,15 +18,67 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/base"
         android:layout_width="244dp"
         android:layout_height="292dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showCurrWord"
-        app:layout_constraintVertical_bias="0.091"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hangmanbase" />
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="244dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hangman1" />
+
+    <ImageView
+        android:id="@+id/body"
+        android:layout_width="239dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hangman2" />
+
+    <ImageView
+        android:id="@+id/arms"
+        android:layout_width="244dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hangman3" />
+
+    <ImageView
+        android:id="@+id/lLeg"
+        android:layout_width="244dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hangman4" />
+
+    <ImageView
+        android:id="@+id/rLeg"
+        android:layout_width="244dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hangman5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
