@@ -14,6 +14,12 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
     private wordList dictionary;
+
+    public static void onNewClick() {
+        onNewClick();
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

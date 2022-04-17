@@ -1,8 +1,11 @@
 package com.groupprojects.hangman;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -21,10 +24,12 @@ public class newGame extends AppCompatActivity {
     //current part - will increment when wrong answers are chosen
     private int currPart;
     //number of characters in current word
-    private int numChars;
+    private int numChars = 5;
     //number correctly guessed
-    private int numCorr;
-    private String answer = "     ";
+    private int numCorr = 0;
+    private int numWrong = 0;
+    private String answer = "";
+    TextView[] charViews = new TextView[gameWordSelected.length()];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,46 +51,84 @@ public class newGame extends AppCompatActivity {
         return gameWordSelected;
     }
 
-    public void showCurrWord(View view){
+    public void showCurrWord(View view) {
         Toast.makeText(this, getGameWord(), Toast.LENGTH_SHORT).show();
-        if (currPart < 5) {
-            bodyParts[currPart].setVisibility(View.INVISIBLE);
-        }
-        currPart ++;
-        if (currPart < 6) {
-            bodyParts[currPart].setVisibility(View.VISIBLE);
-        }    }
+    }
 
+    public void checkLetter(View view) {
 
-    public void checkLetterQ(View view) {
-        TextView textview = findViewById(R.id.alphQ);
+        String ltr=((TextView)view).getText().toString();
+        char letterChar = ltr.charAt(0);
+
+        //Character pageNumber = (v.getTag().toString()).charAt(0);
+        //String page2 = v.getTag().toString();
+        //TextView textview = (TextView) ((TextView)view).getText();
         TextView textview2 = findViewById(R.id.typedWORD);
         for (int i = 0; i < gameWordSelected.length();i++) {
-            if (gameWordSelected.charAt(i) == 'Q') {
-                textview.setBackgroundColor(Color.GREEN);
-                textview2.setText(answer);
 
+            if (numCorr != gameWordSelected.length()) {
+                if (gameWordSelected.charAt(i) == letterChar) {
+                    ((TextView)view).setBackgroundColor(Color.GREEN);
+                    ((TextView)view).setClickable(false);
+                    textview2.setText("Letter is in Word");
+                    numCorr++;
+                    if (numCorr == gameWordSelected.length()){
+                        AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
+                        winBuild.setTitle("YAY");
+                        winBuild.setMessage("You win!\n\nThe answer was:\n\n"+gameWordSelected);
+                        winBuild.setPositiveButton("Play Again",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        MainActivity.onNewClick();
+                                    }});
+
+                        winBuild.setNegativeButton("Exit",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // GameActivity.this.finish();
+                                    }});
+
+                        winBuild.show();
+                    }
+                    break;
+                } else {
+                    //charViews[i].setBackgroundColor(Color.RED);
+                    textview2.setText("Letter is not in Word");
+                    //numWrong++;
+                    ((TextView)view).setBackgroundColor(Color.RED);
+                    ((TextView)view).setClickable(false);
+                    if (currPart < 5) {
+                        bodyParts[currPart].setVisibility(View.INVISIBLE);
+                    }
+                    currPart ++;
+                    if (currPart < 6) {
+                        bodyParts[currPart].setVisibility(View.VISIBLE);
+                    }
+                    if (currPart == 5){
+                        AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
+                        winBuild.setTitle("Aww");
+                        winBuild.setMessage("You Lost!\n\nThe answer was:\n\n"+gameWordSelected);
+                        winBuild.setPositiveButton("Play Again",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        MainActivity.onNewClick();
+                                    }});
+
+                        winBuild.setNegativeButton("Exit",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // GameActivity.this.finish();
+                                    }});
+
+                        winBuild.show();
+                    }
+                    break;
+                }
             }
-            else {
-                textview.setBackgroundColor(Color.RED);
-            }
+
+
         }
     }
 
-    public void checkLetter(View v) {
-        Character pageNumber = (v.getTag().toString()).charAt(0);
-        String page2 = v.getTag().toString();
-        TextView textview = findViewById(R.id.alphW);
-        TextView textview2 = findViewById(R.id.typedWORD);
-        for (int i = 0; i < gameWordSelected.length();i++) {
-            if (gameWordSelected.charAt(i) == pageNumber) {
-                textview.setBackgroundColor(Color.GREEN);
-                textview2.setText(page2);
-                break;
-            }
-            else {
-                textview.setBackgroundColor(Color.RED);
-            }
-        }
-    }
+
 }
