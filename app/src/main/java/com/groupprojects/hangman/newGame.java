@@ -1,14 +1,19 @@
 package com.groupprojects.hangman;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class newGame extends AppCompatActivity {
-private String gameWordSelected = wordList.getWord();
+    private String gameWordSelected = (wordList.getWord()).toUpperCase();
+    //private String gameWordSelected = "Winner";
     //body part images
     private ImageView[] bodyParts;
     //number of body parts
@@ -19,7 +24,7 @@ private String gameWordSelected = wordList.getWord();
     private int numChars;
     //number correctly guessed
     private int numCorr;
-
+    private String answer = "     ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,4 +55,37 @@ private String gameWordSelected = wordList.getWord();
         if (currPart < 6) {
             bodyParts[currPart].setVisibility(View.VISIBLE);
         }    }
+
+
+    public void checkLetterQ(View view) {
+        TextView textview = findViewById(R.id.alphQ);
+        TextView textview2 = findViewById(R.id.typedWORD);
+        for (int i = 0; i < gameWordSelected.length();i++) {
+            if (gameWordSelected.charAt(i) == 'Q') {
+                textview.setBackgroundColor(Color.GREEN);
+                textview2.setText(answer);
+
+            }
+            else {
+                textview.setBackgroundColor(Color.RED);
+            }
+        }
+    }
+
+    public void checkLetter(View v) {
+        Character pageNumber = (v.getTag().toString()).charAt(0);
+        String page2 = v.getTag().toString();
+        TextView textview = findViewById(R.id.alphW);
+        TextView textview2 = findViewById(R.id.typedWORD);
+        for (int i = 0; i < gameWordSelected.length();i++) {
+            if (gameWordSelected.charAt(i) == pageNumber) {
+                textview.setBackgroundColor(Color.GREEN);
+                textview2.setText(page2);
+                break;
+            }
+            else {
+                textview.setBackgroundColor(Color.RED);
+            }
+        }
+    }
 }

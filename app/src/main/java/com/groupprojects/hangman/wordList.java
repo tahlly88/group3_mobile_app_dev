@@ -40,4 +40,10 @@ public class wordList {
     public static String getWord(){
         return pickGoodStarterWord();
     }
+
+
+    public static void checkAlpha(char x){
+
+    }
 }
+
