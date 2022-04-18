@@ -30,7 +30,9 @@ public class newGame extends AppCompatActivity {
     private int numWrong = 0;
     private String answer = "";
     private boolean guessCorr;
-    TextView[] charViews = new TextView[gameWordSelected.length()];
+    private int numRight = 0;
+    private TextView[] gameWordChars;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,16 @@ public class newGame extends AppCompatActivity {
         bodyParts[3] = findViewById(R.id.arms);
         bodyParts[4] = findViewById(R.id.lLeg);
         bodyParts[5] = findViewById(R.id.rLeg);
+
+        gameWordChars = new TextView[5];
+        gameWordChars[0] = findViewById(R.id.ltr1);
+        gameWordChars[1] = findViewById(R.id.ltr2);
+        gameWordChars[2] = findViewById(R.id.ltr3);
+        gameWordChars[3] = findViewById(R.id.ltr4);
+        gameWordChars[4] = findViewById(R.id.ltr5);
+
+
+
         for(int p = 1; p < numParts; p++) {
             bodyParts[p].setVisibility(View.INVISIBLE);
         }
@@ -66,15 +78,17 @@ public class newGame extends AppCompatActivity {
             if (numCorr != gameWordSelected.length()) {
                 if (gameWordSelected.charAt(i) == letterChar) {
                     guessCorr = true;
+                    gameWordChars[i].setText(ltr);
+                    numRight++;
                 }
             }
         }
             if (guessCorr == true) {
                 ((TextView)view).setBackgroundColor(Color.GREEN);
                 ((TextView)view).setClickable(false);
-                textview2.setText("Letter is in Word");
+                //textview2.setText("Letter is in Word");
                 numCorr++;
-                if (numCorr == gameWordSelected.length()){
+                if (numRight == gameWordSelected.length()){
                     AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
                     winBuild.setTitle("YAY");
                     winBuild.setMessage("You win!\n\nThe answer was:\n\n"+gameWordSelected);
@@ -96,7 +110,7 @@ public class newGame extends AppCompatActivity {
 
             else {
 
-                textview2.setText("Letter is not in Word");
+                //textview2.setText("Letter is not in Word");
 
                 ((TextView)view).setBackgroundColor(Color.RED);
                 ((TextView)view).setClickable(false);
