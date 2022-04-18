@@ -29,6 +29,7 @@ public class newGame extends AppCompatActivity {
     private int numCorr = 0;
     private int numWrong = 0;
     private String answer = "";
+    private boolean guessCorr;
     TextView[] charViews = new TextView[gameWordSelected.length()];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,78 +57,78 @@ public class newGame extends AppCompatActivity {
     }
 
     public void checkLetter(View view) {
-
+        guessCorr = false;
         String ltr=((TextView)view).getText().toString();
         char letterChar = ltr.charAt(0);
-
-        //Character pageNumber = (v.getTag().toString()).charAt(0);
-        //String page2 = v.getTag().toString();
-        //TextView textview = (TextView) ((TextView)view).getText();
         TextView textview2 = findViewById(R.id.typedWORD);
         for (int i = 0; i < gameWordSelected.length();i++) {
 
             if (numCorr != gameWordSelected.length()) {
                 if (gameWordSelected.charAt(i) == letterChar) {
-                    ((TextView)view).setBackgroundColor(Color.GREEN);
-                    ((TextView)view).setClickable(false);
-                    textview2.setText("Letter is in Word");
-                    numCorr++;
-                    if (numCorr == gameWordSelected.length()){
-                        AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
-                        winBuild.setTitle("YAY");
-                        winBuild.setMessage("You win!\n\nThe answer was:\n\n"+gameWordSelected);
-                        winBuild.setPositiveButton("Play Again",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        MainActivity.onNewClick();
-                                    }});
+                    guessCorr = true;
+                }
+            }
+        }
+            if (guessCorr == true) {
+                ((TextView)view).setBackgroundColor(Color.GREEN);
+                ((TextView)view).setClickable(false);
+                textview2.setText("Letter is in Word");
+                numCorr++;
+                if (numCorr == gameWordSelected.length()){
+                    AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
+                    winBuild.setTitle("YAY");
+                    winBuild.setMessage("You win!\n\nThe answer was:\n\n"+gameWordSelected);
+                    winBuild.setPositiveButton("Play Again",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    MainActivity.onNewClick();
+                                }});
 
-                        winBuild.setNegativeButton("Exit",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        // GameActivity.this.finish();
-                                    }});
+                    winBuild.setNegativeButton("Exit",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    // GameActivity.this.finish();
+                                }});
 
-                        winBuild.show();
-                    }
-                    break;
-                } else {
-                    //charViews[i].setBackgroundColor(Color.RED);
-                    textview2.setText("Letter is not in Word");
-                    //numWrong++;
-                    ((TextView)view).setBackgroundColor(Color.RED);
-                    ((TextView)view).setClickable(false);
-                    if (currPart < 5) {
-                        bodyParts[currPart].setVisibility(View.INVISIBLE);
-                    }
-                    currPart ++;
-                    if (currPart < 6) {
-                        bodyParts[currPart].setVisibility(View.VISIBLE);
-                    }
-                    if (currPart == 5){
-                        AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
-                        winBuild.setTitle("Aww");
-                        winBuild.setMessage("You Lost!\n\nThe answer was:\n\n"+gameWordSelected);
-                        winBuild.setPositiveButton("Play Again",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        MainActivity.onNewClick();
-                                    }});
+                    winBuild.show();
+            }
+            }
 
-                        winBuild.setNegativeButton("Exit",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        // GameActivity.this.finish();
-                                    }});
+            else {
 
-                        winBuild.show();
-                    }
-                    break;
+                textview2.setText("Letter is not in Word");
+
+                ((TextView)view).setBackgroundColor(Color.RED);
+                ((TextView)view).setClickable(false);
+                if (currPart < 5) {
+                    bodyParts[currPart].setVisibility(View.INVISIBLE);
+                }
+                currPart ++;
+                if (currPart < 6) {
+                    bodyParts[currPart].setVisibility(View.VISIBLE);
+                }
+                if (currPart == 5){
+                    AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
+                    winBuild.setTitle("Aww");
+                    winBuild.setMessage("You Lost!\n\nThe answer was:\n\n"+gameWordSelected);
+                    winBuild.setPositiveButton("Play Again",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    MainActivity.onNewClick();
+                                }});
+
+                    winBuild.setNegativeButton("Exit",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    // GameActivity.this.finish();
+                                }});
+
+                    winBuild.show();
                 }
             }
 
 
-        }
+
     }
 
 
