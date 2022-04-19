@@ -19,7 +19,7 @@ public class newGame extends AppCompatActivity {
     //body part images
     private ImageView[] bodyParts;
     //number of body parts
-    private int numParts=6;
+    private int numParts=7;
     //current part - will increment when wrong answers are chosen
     private int currPart;
     //number of characters in current word
@@ -42,9 +42,10 @@ public class newGame extends AppCompatActivity {
         bodyParts[0] = findViewById(R.id.base);
         bodyParts[1] = findViewById(R.id.head);
         bodyParts[2] = findViewById(R.id.body);
-        bodyParts[3] = findViewById(R.id.arms);
-        bodyParts[4] = findViewById(R.id.lLeg);
-        bodyParts[5] = findViewById(R.id.rLeg);
+        bodyParts[3] = findViewById(R.id.leftArm);
+        bodyParts[4] = findViewById(R.id.arms);
+        bodyParts[5] = findViewById(R.id.lLeg);
+        bodyParts[6] = findViewById(R.id.rLeg);
 
         gameWordChars = new TextView[5];
         gameWordChars[0] = findViewById(R.id.ltr1);
@@ -94,14 +95,14 @@ public class newGame extends AppCompatActivity {
 
                 ((TextView)view).setBackgroundColor(Color.RED);
                 ((TextView)view).setClickable(false);
-                if (currPart < 5) {
+                if (currPart < 6) {
                     bodyParts[currPart].setVisibility(View.INVISIBLE);
                 }
                 currPart ++;
-                if (currPart < 6) {
+                if (currPart < 7) {
                     bodyParts[currPart].setVisibility(View.VISIBLE);
                 }
-                if (currPart == 5){
+                if (currPart == 6){
                    youLose();
                 }
             }
