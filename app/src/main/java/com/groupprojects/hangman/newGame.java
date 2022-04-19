@@ -138,7 +138,7 @@ public class newGame extends AppCompatActivity {
                     winBuild.setNegativeButton("Exit",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    // GameActivity.this.finish();
+                                    newGame.this.finish();
                                 }});
 
                     winBuild.show();
