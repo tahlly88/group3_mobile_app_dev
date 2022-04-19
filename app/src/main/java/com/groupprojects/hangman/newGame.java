@@ -59,6 +59,9 @@ public class newGame extends AppCompatActivity {
         for(int p = 1; p < numParts; p++) {
             bodyParts[p].setVisibility(View.INVISIBLE);
         }
+        if (getSupportActionBar() != null) {
+           getSupportActionBar().hide();
+        }
     }
     public String getGameWord(){
         return gameWordSelected;
