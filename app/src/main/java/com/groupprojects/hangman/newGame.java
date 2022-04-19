@@ -128,7 +128,11 @@ public class newGame extends AppCompatActivity {
                     winBuild.setPositiveButton("Play Again",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    MainActivity.onNewClick();
+                                    //MainActivity.onNewClick();
+                                    Intent intent = getIntent();
+                                    finish();
+                                    startActivity(intent);
+
                                 }});
 
                     winBuild.setNegativeButton("Exit",
