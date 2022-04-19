@@ -1,5 +1,7 @@
 package com.groupprojects.hangman;
 
+import android.content.Intent;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -42,8 +44,5 @@ public class wordList {
     }
 
 
-    public static void checkAlpha(char x){
-
-    }
 }
 
