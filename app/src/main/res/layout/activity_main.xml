@@ -11,7 +11,7 @@
         android:id="@+id/new_game_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/dark_dark_brown"
         android:onClick="onNewClick"
         android:rotationX="0"
         android:text="@string/new_game"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="@string/about"
         android:onClick="onAboutClick"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/dark_dark_brown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/new_game_button" />
