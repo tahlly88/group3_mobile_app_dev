@@ -13,6 +13,9 @@ public class aboutGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
 
     }
 
