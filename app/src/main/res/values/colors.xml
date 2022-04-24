@@ -12,4 +12,6 @@
     <color name="brown">#AD9E82</color>
     <color name="dark_brown">#7A6447</color>
     <color name="dark_dark_brown">#7B5419</color>
+    <color name="red_gradiant">#A12015</color>
+    <color name="dark_gray">#636060</color>
 </resources>

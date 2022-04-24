@@ -7,15 +7,15 @@
         <entry key="..\:/Users/mlgga/AndroidStudioProjects/group3_mobile_app_dev/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/mlgga/AndroidStudioProjects/group3_mobile_app_dev/app/src/main/res/layout/activity_new_game.xml" value="0.55" />
         <entry key="..\:/Users/mlgga/AndroidStudioProjects/group3_mobile_app_dev/app/src/main/res/layout/activity_word_list.xml" value="0.55" />
-        <entry key="..\:/Users/mlgga/StudioProjects/group3_mobile_app_dev/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1735" />
-        <entry key="..\:/Users/mlgga/StudioProjects/group3_mobile_app_dev/app/src/main/res/layout/activity_about.xml" value="0.1762917933130699" />
         <entry key="..\:/Users/mlgga/StudioProjects/group3_mobile_app_dev/app/src/main/res/layout/activity_new_game.xml" value="0.3625" />
-        <entry key="..\:/Users/mlgga/StudioProjects/group3_mobile_app_dev/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1735" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
+        <entry key="app/src/main/res/drawable/buttons_gradient.xml" value="0.2265" />
+        <entry key="app/src/main/res/drawable/gradient_drawable.xml" value="0.2265" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="app/src/main/res/drawable/ic_name_of_game.xml" value="0.106" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.14563106796116504" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1217147827148437" />
-        <entry key="app/src/main/res/layout/activity_new_game.xml" value="0.3599105834960936" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3250991821289063" />
+        <entry key="app/src/main/res/layout/activity_new_game.xml" value="0.10156097412109372" />
       </map>
     </option>
   </component>
