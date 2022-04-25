@@ -124,6 +124,7 @@ public class newGame extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //To be implemented in the future
     public void checkTypedWord(View view){
 
         typedWord = ((TextView)view).getText().toString();

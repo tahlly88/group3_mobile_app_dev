@@ -70,23 +70,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hangman5" />
 
-    <EditText
-        android:id="@+id/typedWORD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:onClick="checkTypedWord"
-        android:hint="Guess full word"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
-
     <TextView
         android:id="@+id/alphQ"
         android:layout_width="wrap_content"
