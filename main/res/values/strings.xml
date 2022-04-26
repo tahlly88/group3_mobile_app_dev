@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Hangman</string>
-    <string name="about">About</string>
-    <string name="new_game">New Game</string>
-    <string name="hangman">Hangman</string>
-    <string name="description">Description: guess the word within 5 opportunities before you lose</string>
-</resources>
