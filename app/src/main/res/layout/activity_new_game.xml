@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_black"
     tools:context=".newGame">
 
     <ImageView
@@ -72,501 +73,471 @@
 
     <TextView
         android:id="@+id/alphQ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Q"
+        style="@style/RoundButton"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="Q"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.734" />
 
     <TextView
         android:id="@+id/alphW"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="30dp"
-        android:text="W"
         android:onClick="checkLetter"
         android:tag="W"
-        android:textSize="20sp"
+        android:text="W"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.734" />
 
     <TextView
         android:id="@+id/alphE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="30dp"
-        android:text="E"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="E"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.734" />
 
     <TextView
         android:id="@+id/alphR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="30dp"
-        android:text="R"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="R"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintHorizontal_bias="0.271"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.734" />
 
     <TextView
         android:id="@+id/alphY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="40dp"
-        android:text="Y"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="Y"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.734" />
 
     <TextView
         android:id="@+id/alphT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="30dp"
+        android:onClick="checkLetter"
         android:text="T"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
 
-    <TextView
-        android:id="@+id/alphU"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:text="U"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
-
-    <TextView
-        android:id="@+id/alphI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:text="I"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
-
-    <TextView
-        android:id="@+id/alphO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:text="O"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
-
-    <TextView
-        android:id="@+id/alphP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:text="P"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
-
-    <TextView
-        android:id="@+id/alphA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="A"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735" />
-
-    <TextView
-        android:id="@+id/alphS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:text="S"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
-
-    <TextView
-        android:id="@+id/alphD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:text="D"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.316"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
-
-    <TextView
-        android:id="@+id/alphF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:text="F"
-        android:onClick="checkLetter"
-        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.392"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintVertical_bias="0.734" />
+
+    <TextView
+        android:id="@+id/alphU"
+        style="@style/RoundButton"
+        android:layout_marginStart="44dp"
+        android:onClick="checkLetter"
+        android:text="U"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
+
+    <TextView
+        android:id="@+id/alphI"
+        style="@style/RoundButton"
+        android:layout_marginStart="54dp"
+        android:onClick="checkLetter"
+        android:text="I"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
+
+    <TextView
+        android:id="@+id/alphO"
+        style="@style/RoundButton"
+        android:layout_marginStart="75dp"
+        android:onClick="checkLetter"
+        android:text="O"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
+
+    <TextView
+        android:id="@+id/alphP"
+        style="@style/RoundButton"
+        android:layout_marginStart="110dp"
+        android:onClick="checkLetter"
+        android:text="P"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.984"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
+
+    <TextView
+        android:id="@+id/alphA"
+        style="@style/RoundButton"
+        android:layout_marginTop="80dp"
+        android:onClick="checkLetter"
+        android:text="A"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.802" />
+
+    <TextView
+        android:id="@+id/alphS"
+        style="@style/RoundButton"
+
+        android:layout_marginStart="36dp"
+        android:onClick="checkLetter"
+        android:text="S"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <TextView
+        android:id="@+id/alphD"
+
+        style="@style/RoundButton"
+
+        android:layout_marginStart="26dp"
+
+
+        android:onClick="checkLetter"
+        android:text="D"
+
+        android:textStyle="bold"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <TextView
+        android:id="@+id/alphF"
+        style="@style/RoundButton"
+        android:layout_marginStart="33dp"
+        android:onClick="checkLetter"
+        android:text="F"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
 
     <TextView
         android:id="@+id/alphG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="36dp"
-        android:text="G"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="G"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintVertical_bias="0.83" />
 
     <TextView
         android:id="@+id/alphH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="40dp"
-        android:text="H"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="H"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintVertical_bias="0.83" />
 
     <TextView
         android:id="@+id/alphJ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="51dp"
-        android:text="J"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="J"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.632"
+        app:layout_constraintHorizontal_bias="0.689"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintVertical_bias="0.83" />
 
     <TextView
         android:id="@+id/alphK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="50dp"
-        android:text="K"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="K"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintHorizontal_bias="0.822"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintVertical_bias="0.83" />
 
     <TextView
         android:id="@+id/alphL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginStart="88dp"
-        android:text="L"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="L"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintVertical_bias="0.83" />
 
     <TextView
         android:id="@+id/alphZ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginTop="100dp"
-        android:text="Z"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="Z"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.902" />
 
     <TextView
         android:id="@+id/alphX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginTop="100dp"
-        android:text="X"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="X"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.279"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.902" />
 
     <TextView
         android:id="@+id/alphC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginTop="100dp"
-        android:text="C"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="C"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.902" />
 
     <TextView
         android:id="@+id/alphV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginTop="100dp"
-        android:text="V"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="V"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.902" />
 
     <TextView
         android:id="@+id/alphB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginTop="100dp"
-        android:text="B"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="B"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintHorizontal_bias="0.614"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.902" />
 
     <TextView
         android:id="@+id/alphN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginTop="100dp"
-        android:text="N"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="N"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.685"
+        app:layout_constraintHorizontal_bias="0.731"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.902" />
 
     <TextView
         android:id="@+id/alphM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/RoundButton"
         android:layout_marginTop="100dp"
-        android:text="M"
         android:onClick="checkLetter"
-        android:textSize="20sp"
+        android:text="M"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintHorizontal_bias="0.845"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.902" />
 
     <TextView
         android:id="@+id/ltr1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_"
-        android:textSize="25sp"
+        style="@style/TextSpot"
+        android:text=""
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <TextView
         android:id="@+id/ltr2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextSpot"
         android:layout_marginStart="55dp"
-        android:text="_"
-        android:textSize="25sp"
+        android:text=""
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <TextView
         android:id="@+id/ltr3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextSpot"
         android:layout_marginStart="70dp"
-        android:text="_"
-        android:textSize="25sp"
+        android:text=""
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <TextView
         android:id="@+id/ltr4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextSpot"
         android:layout_marginStart="90dp"
-        android:text="_"
-        android:textSize="25sp"
+        android:text=""
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.638"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <TextView
         android:id="@+id/ltr5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextSpot"
         android:layout_marginStart="125dp"
-        android:text="_"
-        android:textSize="25sp"
+        android:text=""
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <TextView
         android:id="@+id/cheatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="80dp"
         android:onClick="showCurrWord"
-        android:layout_marginBottom="116dp"
         android:text="      "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
